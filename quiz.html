@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDU Quiz - Daily Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page" id="page2">
+            <div class="quiz-header">
+                <h1>Daily Quiz</h1>
+                <p id="userId" class="user-info"></p>
+            </div>
+            
+            <div id="quizContent" class="quiz-content">
+                <div class="loading">Loading today's quiz...</div>
+            </div>
+            
+            <div class="navigation">
+                <button class="btn-secondary" onclick="logout()">Logout</button>
+                <button class="btn-primary" id="submitBtn" style="display:none;" onclick="submitQuiz()">Submit Answer</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="quiz-script.js"></script>
+</body>
+</html>
