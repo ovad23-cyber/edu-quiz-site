@@ -1,0 +1,10 @@
+edu-quiz-site/
+├── index.html                 # Registration page
+├── quiz.html                  # Quiz page
+├── thank-you.html             # Thank you page
+├── styles.css                 # All styling
+├── script.js                  # Registration logic
+├── quiz-script.js             # Quiz & API integration logic
+├── thank-you-script.js        # Thank you page logic
+├── API_INTEGRATION_GUIDE.md   # API setup instructions
+└── README.md                  # This file
