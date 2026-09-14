@@ -9,52 +9,78 @@
 <body>
     <div class="container">
         <div class="page" id="page1">
-            <h1>Welcome to EDU Quiz</h1>
-            <p>Register to get started with our daily quiz</p>
+            <!-- Band Image -->
+            <div class="band-image-container">
+                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop" alt="Rock Band" class="band-image">
+            </div>
             
-            <form id="registrationForm">
-                <div class="form-group">
-                    <label for="userId">Student ID:</label>
-                    <input 
-                        type="text" 
-                        id="userId" 
-                        placeholder="Must start with 'edu' (e.g., edu12345)" 
-                        required
-                    >
-                    <span class="error" id="idError"></span>
-                </div>
+            <!-- Centered Content -->
+            <div class="registration-content">
+                <h1>Welcome to EDU Quiz</h1>
+                <p class="subtitle">Register to get started with our daily quiz</p>
                 
-                <div class="terms-section">
-                    <h3>Terms of Service</h3>
-                    <div class="terms-box">
-                        <p><strong>1. Usage Agreement</strong><br>
-                        By registering, you agree to use this platform for educational purposes only.</p>
-                        
-                        <p><strong>2. Student ID Requirements</strong><br>
-                        Your Student ID must start with "edu" and be unique.</p>
-                        
-                        <p><strong>3. Daily Quiz</strong><br>
-                        Quiz questions and images are provided by our content API and refresh daily.</p>
-                        
-                        <p><strong>4. Data Privacy</strong><br>
-                        We collect minimal data and do not share your information with third parties.</p>
-                        
-                        <p><strong>5. Acceptable Use</strong><br>
-                        Do not attempt to bypass security measures or abuse the platform.</p>
-                        
-                        <p><strong>6. Liability</strong><br>
-                        This platform is provided "as-is". We are not liable for any damages or losses.</p>
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="userId" 
+                            placeholder="Student ID (must start with 'edu')" 
+                            required
+                        >
+                        <span class="error" id="idError"></span>
                     </div>
-                </div>
+                    
+                    <!-- Clickable Terms Link -->
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="termsCheckbox" required>
+                        <label for="termsCheckbox">
+                            I agree to the <a href="#" id="termsLink" class="terms-link">Terms of Service</a>
+                        </label>
+                        <span class="error" id="termsError"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Continue to Quiz</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Terms Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Terms of Service</h2>
+                <span class="close" id="closeModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p><strong>1. Usage Agreement</strong><br>
+                By registering, you agree to use this platform for educational purposes only.</p>
                 
-                <div class="form-group checkbox">
-                    <input type="checkbox" id="termsCheckbox" required>
-                    <label for="termsCheckbox">I agree to the Terms of Service</label>
-                    <span class="error" id="termsError"></span>
-                </div>
+                <p><strong>2. Student ID Requirements</strong><br>
+                Your Student ID must start with "edu" and be unique.</p>
                 
-                <button type="submit" class="btn-primary">Continue to Quiz</button>
-            </form>
+                <p><strong>3. Daily Quiz</strong><br>
+                Quiz questions and images are provided by our content API and refresh daily.</p>
+                
+                <p><strong>4. Data Privacy</strong><br>
+                We collect minimal data and do not share your information with third parties.</p>
+                
+                <p><strong>5. Acceptable Use</strong><br>
+                Do not attempt to bypass security measures or abuse the platform.</p>
+                
+                <p><strong>6. Liability</strong><br>
+                This platform is provided "as-is". We are not liable for any damages or losses.</p>
+                
+                <p><strong>7. User Responsibilities</strong><br>
+                You are responsible for maintaining the confidentiality of your Student ID and for all activities under your account.</p>
+                
+                <p><strong>8. Modifications</strong><br>
+                We reserve the right to modify these terms at any time. Continued use constitutes acceptance of changes.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-secondary" id="agreeBtn">I Agree</button>
+                <button type="button" class="btn-secondary" id="declineBtn">Decline</button>
+            </div>
         </div>
     </div>
     
